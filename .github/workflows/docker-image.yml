@@ -1,4 +1,4 @@
- name: Docker Image CI
+name: Docker Image CI
 
 on:
   push:
@@ -23,4 +23,3 @@ jobs:
       run: docker build . --file Dockerfile --tag  ${{ secrets.DOCKER_HUB_USERNAME }}/webapp:latest
     - name: Push image
       run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/webapp:latest
- 
